@@ -1,4 +1,3 @@
-
 name: container
 on: push
 
@@ -26,9 +25,9 @@ jobs:
           npm run lint
           npm run build
           npm run test
-      server:
-        strategy:
-           matrix: 
+   server:
+      strategy:
+        matrix: 
              os:[ubuntu-latest, macos-latest]
         runs-on: ${{ matrix.os }}
         env: 
